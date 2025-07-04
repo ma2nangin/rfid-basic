@@ -1,0 +1,23 @@
+/*
+   Tujuan:
+   Membaca UID (Unique ID) dari tag RFID/NFC (kartu atau gantungan kunci)
+   menggunakan modul MFRC522 dan menampilkannya di Serial Monitor Arduino.
+
+   Persyaratan:
+   - Arduino Uno (atau kompatibel) -- <--- KODINGAN INI UNTUK ARDUINO UNO
+   - Modul RFID-RC522
+   - Library MFRC522 by Udo Klein (atau yang setara)
+
+   Koneksi (Wiring) Arduino Uno dengan MFRC522:
+   --------------------------------------------------------------
+   MFRC522 Pin | Arduino Uno Pin | Keterangan
+   --------------------------------------------------------------
+   SDA (SS)    | D10             | Slave Select (Pin SPI SS pada Uno)
+   SCK         | D13             | Serial Clock (Pin SPI SCK pada Uno)
+   MOSI        | D11             | Master Out Slave In (Pin SPI MOSI pada Uno)
+   MISO        | D12             | Master In Slave Out (Pin SPI MISO pada Uno)
+   IRQ         | (Tidak terhubung/opsional dalam contoh ini)
+   GND         | GND             | Ground
+   RST         | D9              | Reset (Pin Digital biasa, bisa diubah)
+   3.3V        | 3.3V            | Power Supply (PENTING: JANGAN 5V!)
+   --------------------------------------------------------------
